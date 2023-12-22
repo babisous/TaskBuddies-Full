@@ -1,0 +1,62 @@
+@import "Main.scss";
+
+.loginPageContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	width: 100%;
+	height: 100%;
+}
+
+.logo {
+	position: absolute;
+	top: 32px;
+	left: 32px;
+}
+.authContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 64px 64px;
+	width: 400px;
+}
+
+.authTitle {
+	align-self: flex-start;
+}
+
+.authForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+}
+
+input {
+	width: 100%;
+}
+
+.authBtnContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.errorMsg {
+	color: $redColor;
+	font-size: 12px;
+}
+
+// Responsive
+
+@media screen and (max-width: 768px) {
+	.authContainer {
+		padding: 12px 12px;
+		width: 350px;
+	}
+}

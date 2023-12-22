@@ -1,0 +1,52 @@
+@import "Main";
+
+.logoNav {
+	height: 48px;
+}
+
+.navbarContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 24px;
+	box-sizing: border-box;
+	background-color: $grayDarkColor;
+}
+
+.logoutBtn {
+	background-color: transparent;
+	color: $whiteColor;
+	border: none;
+	padding: 0;
+}
+
+.logoutBtn:hover {
+	color: $redColor;
+}
+
+.linkIcon {
+	color: $whiteColor;
+}
+
+.linkIcon.active {
+	color: $blueDarkColor;
+}
+
+.navbarLinks {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.navbarDate {
+	color: $whiteColor;
+	font-size: 1em;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.calendarIcon:hover {
+	color: $blueDarkColor;
+	cursor: pointer;
+}

@@ -1,0 +1,145 @@
+@import "Main";
+:root {
+	font-family: Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: $blackColor;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+div#root {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+}
+
+a {
+	font-weight: 500;
+	color: $blueDarkColor;
+	text-decoration: inherit;
+}
+
+a:hover {
+	color: $blueDarkColor;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+button {
+	border-radius: 34px;
+	border: 1px solid transparent;
+	padding: 8px 12px;
+	font-size: 14px;
+	background-color: $blueDarkColor;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+button:hover {
+	border-color: $blueDarkColor;
+	color: $blueDarkColor;
+	background-color: $blackColor;
+}
+
+button:disabled {
+	background-color: $grayColor;
+	color: $grayDarkColor;
+	border-color: $grayColor;
+	cursor: not-allowed;
+}
+
+.secondaryBtn {
+	background-color: transparent;
+	border-color: $whiteColor;
+	transition: ease-in-out 0.25s;
+}
+
+.secondaryBtn:hover {
+	background-color: $whiteColor;
+	color: $blackColor;
+	border-color: $whiteColor;
+}
+
+input {
+	border: 1px solid transparent;
+	border-radius: 34px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: $grayDarkColor;
+	transition: border-color 0.25s;
+	padding: 14px 18px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 24px;
+}
+
+input:focus,
+input:focus-visible {
+	outline: 4px auto $blueDarkColor;
+}
+
+.errorText {
+	color: $redColor;
+}
+
+.app-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.dashboardPage {
+	display: flex;
+	width: 100vw;
+	height: 90vh;
+	padding: 12px 16px;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.loginPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+select {
+	border: 1px solid transparent;
+	border-radius: 34px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: $grayDarkColor;
+	transition: border-color 0.25s;
+	padding: 14px 18px;
+	box-sizing: border-box;
+	width: 100%;
+	appearance: none;
+}

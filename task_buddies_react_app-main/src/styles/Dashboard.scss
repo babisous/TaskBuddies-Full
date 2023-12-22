@@ -1,0 +1,470 @@
+@import "Main.scss";
+.columnComponent {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	height: 100%;
+	width: 30%;
+}
+
+#firstColumn {
+	width: 32%;
+}
+
+#secondColumn {
+	width: 26%;
+}
+
+#thirdColumn {
+	width: 40%;
+}
+
+#taskFormComponent {
+	width: 30%;
+}
+
+#taskListComponent {
+	width: 30%;
+}
+
+// #statLineComponent {
+// 	height: 120%;
+// }
+
+// #dayDoughtNutComponent {
+// 	height: 130%;
+// }
+
+#dayDoughtNutComponent .bodyContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: 24px;
+	overflow-y: auto;
+	box-sizing: border-box;
+}
+
+.tileContainer {
+	border-radius: 34px;
+	border: solid 1px $grayColor;
+	padding: 0px 18px;
+	margin: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: all 0.2s ease-in-out;
+	width: 100%;
+	box-sizing: border-box;
+	height: 36px;
+}
+
+.userCommentText {
+	font-size: 14px;
+	color: $whiteColor;
+	display: flex;
+	align-items: center;
+	align-items: baseline;
+	gap: 8px;
+	height: 16px;
+}
+
+.commentTileContainer {
+	border-radius: 34px;
+	padding: 0px 18px;
+	margin: -12px 0px 0px 0px;
+	width: 100%;
+	word-wrap: break-word;
+	box-sizing: border-box;
+}
+
+.headerBtn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	height: 20px;
+	width: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+
+	color: $whiteColor;
+}
+
+.headerBtn svg {
+	width: 100%;
+	height: 100%;
+}
+
+.headerBtn:hover {
+	color: $blueDarkColor;
+}
+
+.closeHeaderBtn {
+	color: $redColor;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	height: 20px;
+	width: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+}
+
+.closeHeaderBtn svg {
+	width: 100%;
+	height: 100%;
+}
+
+.closeHeaderBtn:hover {
+	color: $whiteColor;
+}
+
+.taskTileContainer {
+	background-color: $grayDarkColor;
+	border-radius: 34px;
+	padding: 0px 18px;
+	margin: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	width: 100%;
+	box-sizing: border-box;
+	height: 46px;
+}
+
+.groupIcons {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.taskTileContainer:hover {
+	background-color: $grayColor;
+}
+
+.taskTileContent {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.taskTileButton {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	height: 32px;
+	width: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.validated {
+	background-color: $blackColor;
+}
+
+.componentContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 34px;
+	width: 100%;
+	height: 100%;
+	border: solid 1px $grayColor;
+	overflow: hidden;
+}
+
+.componentHeader {
+	border-bottom: 1px solid $grayColor;
+	display: flex;
+	padding: 6px 24px 0px 24px;
+	width: 100%;
+	box-sizing: border-box;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bodyContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 24px;
+	overflow-y: auto;
+	box-sizing: border-box;
+}
+
+.antiMalefice {
+	max-width: 500px;
+}
+
+.checkboxesContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	padding: 12px 24px;
+	box-sizing: border-box;
+	background-color: $grayDarkColor;
+	border-radius: 34px;
+	gap: 12px;
+}
+#monthDayList {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+	gap: 12px;
+	padding: 24px;
+}
+
+#monthDayList::after {
+	content: "";
+	flex: auto;
+}
+
+.checkbox-container {
+	position: relative;
+	font-weight: 600;
+	color: $whiteColor;
+}
+
+.checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.checkmark {
+	position: relative;
+	height: 32px;
+	width: 32px;
+	background-color: $grayColor;
+	border: none;
+	margin-right: 8px;
+	border-radius: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkmark::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $grayDarkColor;
+}
+
+.checkbox-container label {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+	background-color: $greenColor;
+	border: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+	color: #fff;
+}
+
+.tagIcon {
+	background-color: transparent;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tagColor {
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	padding: 0;
+	margin: 4px;
+}
+
+.iconContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	padding: 12px;
+	box-sizing: border-box;
+	background-color: $grayDarkColor;
+	border-radius: 34px;
+	width: fit-content;
+}
+
+.colorContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	padding: 16px;
+	box-sizing: border-box;
+	background-color: $grayDarkColor;
+	border-radius: 34px;
+	width: fit-content;
+}
+
+.colorContainer::after {
+	content: "";
+	flex: auto;
+}
+
+.iconContainer::after {
+	content: "";
+	flex: auto;
+}
+
+.tagTileContainer {
+	display: flex;
+	align-items: center;
+	border: solid 1px $grayColor;
+	width: fit-content;
+	padding: 0px 10px 0px 0px;
+	border-radius: 34px;
+}
+
+.tagTileContainer.active {
+	border: solid 1px $blueDarkColor;
+}
+
+.tagTitle {
+	line-height: 6px;
+	font-size: 12px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.tagsContainer {
+	display: flex;
+	align-items: center;
+	padding: 6px 24px 6px 24px;
+	width: 100%;
+	box-sizing: border-box;
+	overflow-x: auto;
+	overflow-y: hidden;
+	gap: 6px;
+	border-bottom: 1px solid $grayColor;
+	box-sizing: border-box;
+}
+
+.tagColor.active {
+	border: solid 2px $whiteColor;
+}
+
+.tagIcon.active {
+	border: solid 2px $whiteColor;
+}
+
+.tagListUpdateContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 12px;
+}
+
+.tagListUpdateContainer > .tagTileContainer {
+	margin: 12px 6px 0px 0px;
+}
+
+.formComment {
+	display: flex;
+	align-items: center;
+	height: 36px;
+	width: 100%;
+}
+
+.btnComment {
+	background-color: transparent;
+	border: solid 1px $grayColor;
+	cursor: pointer;
+	padding: 0px 12px 0px 6px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	height: 100%;
+	border-radius: 0px 34px 34px 0px;
+	border-left: none;
+}
+
+.inputComment {
+	background-color: $grayDarkColor;
+	border-radius: 34px 0px 0px 34px;
+	border: solid 1px $grayColor;
+	padding: 0px 18px;
+	margin: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: all 0.2s ease-in-out;
+	box-sizing: border-box;
+	height: 36px;
+	border-right: none;
+}
+
+.redBtn {
+	color: $whiteColor;
+	text-decoration: none;
+	cursor: pointer;
+
+	border: solid 1px $redColor;
+	background: none;
+
+	width: fit-content;
+}
+
+.redBtn:hover {
+	color: $redColor;
+	border: solid 1px $redColor;
+}
+
+.btnGroup {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+@media (max-width: 750px) {
+	.dashboardPage {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.columnComponent {
+		width: 100% !important;
+	}
+
+	#dayDoughtNutComponent {
+		height: 450px;
+	}
+
+	.bodyContainer {
+		height: 100%;
+	}
+
+	.logoNav {
+		height: 24px !important;
+	}
+
+	.navBar p {
+		font-size: 10px;
+	}
+}
